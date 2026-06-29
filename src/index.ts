@@ -11,12 +11,14 @@ app.use('/api/*', cors())
 // Endpoint Utama
 app.get('/', (c) => c.text('Lexicon API is running! 🚀'))
 
-// Endpoint Negara (Gunakan async)
-app.get("/api/countries", async (c) => {
-  // Karena ini Promise, kita tunggu (await) hasilnya terlebih dahulu
-  const rawCountries = await getCountries();
+// Endpoint Negara (Ubah jadi sync, hapus async/await)
+app.get("/api/countries", (c) => {
+  const rawCountries = getCountries();
   
-  // Setelah data didapat, baru kita petakan (map) sesuai kebutuhan
+  if (!rawCountries) {
+    return c.json({ error: "Gagal mengambil data negara" }, 500);
+  }
+
   const countries = rawCountries.map((country) => ({
     code: country.isoCode,
     name: country.name,
@@ -27,8 +29,8 @@ app.get("/api/countries", async (c) => {
   return c.json(countries);
 });
 
-// Endpoint Dropdown Kota / Provinsi (Gunakan async)
-app.get('/api/cities', async (c) => {
+// Endpoint Dropdown Kota / Provinsi (Hapus juga async/await di sini)
+app.get('/api/cities', (c) => {
   const countryCode = c.req.query('country');
   const stateCode = c.req.query('state');
 
@@ -36,17 +38,17 @@ app.get('/api/cities', async (c) => {
     return c.json({ error: "Query parameter 'country' (ISO Code) diperlukan" }, 400);
   }
 
-  // Jika ada parameter state, ambil kotanya. Jika tidak, ambil daftar provinsi/state.
+  // HAPUS await di bawah ini
   if (stateCode) {
-    const cities = await getCitiesOfState(countryCode, stateCode);
+    const cities = getCitiesOfState(countryCode, stateCode);
     return c.json(cities);
   } else {
-    const states = await getStatesOfCountry(countryCode);
+    const states = getStatesOfCountry(countryCode);
     return c.json(states);
   }
 });
 
-// Endpoint Dropdown ICD (Tetap sync tidak apa-apa karena hanya baca file JSON lokal)
+// Endpoint Dropdown ICD
 app.get('/api/icd-dental', (c) => {
   const search = c.req.query('search')?.toLowerCase()
 
