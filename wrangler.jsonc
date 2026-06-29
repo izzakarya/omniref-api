@@ -2,7 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "omniref-api",
   "main": "src/index.ts",
-  "compatibility_date": "2026-06-28"
+  "compatibility_date": "2026-06-28",
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
@@ -35,4 +35,7 @@
   //   "enabled": true,
   //   "head_sampling_rate": 1
   // }
+  "compatibility_flags": [
+      "nodejs_compat"
+    ],
 }
