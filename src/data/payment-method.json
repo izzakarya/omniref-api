@@ -1,0 +1,9 @@
+[
+  { "code": "CASH", "name": "CASH / TUNAI" },
+  { "code": "QRIS", "name": "QRIS" },
+  { "code": "TRANSFER", "name": "BANK TRANSFER" },
+  { "code": "EDC", "name": "EDC / KARTU DEBIT" },
+  { "code": "BPJS", "name": "CLAIM BPJS" },
+  { "code": "VOUCHER", "name": "VOUCHER" },
+  { "code": "GMAPS", "name": "VOUCHER GMAPS" }
+]
