@@ -1,0 +1,7 @@
+[
+  { "code": "ALKES", "name": "Alat Kesehatan" },
+  { "code": "BMHP", "name": "Bahan Medis Habis Pakai" },
+  { "code": "GIFT", "name": "Gift Card / Voucher" },
+  { "code": "OBAT", "name": "Obat-obatan" },
+  { "code": "RETAIL", "name": "Retail / OTC" }
+]

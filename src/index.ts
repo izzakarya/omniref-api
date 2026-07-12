@@ -7,7 +7,9 @@ import {
   ICountry,
 } from "@countrystatecity/countries";
 import dataIcdDental from "./data/icd-dental.json";
-import dataPaymentMethod from "./data/payment-method.json";
+import dataPaymentMethods from "./data/payment-methods.json";
+import dataUOMs from "./data/unit-of-measures.json";
+import dataProductCategories from "./data/product-categories.json";
 
 const app = new Hono();
 
@@ -78,7 +80,7 @@ app.get("/api/payment-method", (c) => {
   const search = c.req.query("search")?.toLowerCase();
 
   if (search) {
-    const filtered = dataPaymentMethod.filter(
+    const filtered = dataPaymentMethods.filter(
       (item) =>
         item.code.toLowerCase().includes(search) ||
         item.name.toLowerCase().includes(search),
@@ -86,7 +88,39 @@ app.get("/api/payment-method", (c) => {
     return c.json(filtered);
   }
 
-  return c.json(dataPaymentMethod);
+  return c.json(dataPaymentMethods);
+});
+
+// Endpoint Dropdown UOM
+app.get("/api/uom", (c) => {
+  const search = c.req.query("search")?.toLowerCase();
+
+  if (search) {
+    const filtered = dataUOMs.filter(
+      (item) =>
+        item.code.toLowerCase().includes(search) ||
+        item.name.toLowerCase().includes(search),
+    );
+    return c.json(filtered);
+  }
+
+  return c.json(dataUOMs);
+});
+
+// Endpoint Dropdown Product Categories
+app.get("/api/product-categories", (c) => {
+  const search = c.req.query("search")?.toLowerCase();
+
+  if (search) {
+    const filtered = dataProductCategories.filter(
+      (item) =>
+        item.code.toLowerCase().includes(search) ||
+        item.name.toLowerCase().includes(search),
+    );
+    return c.json(filtered);
+  }
+
+  return c.json(dataProductCategories);
 });
 
 export default app;

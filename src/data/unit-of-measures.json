@@ -1,0 +1,20 @@
+[
+  { "code": "BLISTER", "name": "Blister" },
+  { "code": "BOTOL", "name": "Botol" },
+  { "code": "BOX", "name": "Box" },
+  { "code": "CARPULE", "name": "Carpule" },
+  { "code": "GRAM", "name": "Gram" },
+  { "code": "JAR", "name": "Jar" },
+  { "code": "JERIGEN", "name": "Jerigen" },
+  { "code": "KIT", "name": "Kit" },
+  { "code": "LITRE", "name": "Liter" },
+  { "code": "ML", "name": "Milliliter" },
+  { "code": "PACK", "name": "Pack" },
+  { "code": "PCS", "name": "Pieces" },
+  { "code": "ROLL", "name": "Roll" },
+  { "code": "SET", "name": "SET" },
+  { "code": "STRIP", "name": "Strip" },
+  { "code": "TABLET", "name": "Tablet" },
+  { "code": "TUBE", "name": "Tube" },
+  { "code": "UNIT", "name": "Unit" }
+]
