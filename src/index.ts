@@ -10,6 +10,7 @@ import dataIcdDental from "./data/icd-dental.json";
 import dataPaymentMethods from "./data/payment-methods.json";
 import dataUOMs from "./data/unit-of-measures.json";
 import dataProductCategories from "./data/product-categories.json";
+import dataDentalNomenclature from "./data/dental-nomenclatures.json";
 
 const app = new Hono();
 
@@ -121,6 +122,33 @@ app.get("/api/product-categories", (c) => {
   }
 
   return c.json(dataProductCategories);
+});
+
+// Endpoint untuk spesifik kategori
+app.get("/api/dental-nomenclatures/:category", (c) => {
+  const category = c.req.param("category");
+  const search = c.req.query("search")?.toLowerCase();
+
+  // Ambil nilai dari data
+  const data = (dataDentalNomenclature as any)[category];
+
+  // 1. Cek apakah data ada DAN apakah data tersebut adalah array (punya .filter)
+  if (!data || !Array.isArray(data)) {
+    return c.json({ error: "Category not found or invalid" }, 404);
+  }
+
+  // 2. Sekarang TS tahu 'data' adalah array
+  let filteredItems = data;
+
+  if (search) {
+    filteredItems = data.filter(
+      (i: any) =>
+        i.term.toLowerCase().includes(search) ||
+        i.description.toLowerCase().includes(search),
+    );
+  }
+
+  return c.json({ [category]: filteredItems });
 });
 
 export default app;

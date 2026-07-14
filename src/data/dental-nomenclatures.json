@@ -1,0 +1,122 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-07-13",
+  "diagnoses": [
+    {
+      "term": "Abrasion",
+      "description": "Pengikisan permukaan gigi akibat tindakan mekanis"
+    },
+    {
+      "term": "Attrition",
+      "description": "Pengikisan permukaan gigi akibat gesekan antar gigi"
+    },
+    {
+      "term": "Caries",
+      "description": "Gigi mengalami karies atau berlubang"
+    },
+    {
+      "term": "Diastema",
+      "description": "Adanya celah atau jarak di antara gigi"
+    },
+    {
+      "term": "Erosion",
+      "description": "Pengikisan permukaan gigi akibat zat kimia atau asam"
+    },
+    {
+      "term": "Fistula",
+      "description": "Saluran nanah akibat infeksi kronis di ujung akar"
+    },
+    {
+      "term": "Gingival Recession",
+      "description": "Menyusutnya jaringan gusi ke arah akar gigi"
+    },
+    { "term": "Gingivitis", "description": "Peradangan pada jaringan gusi" },
+    {
+      "term": "Hypoplasia",
+      "description": "Email gigi tidak terbentuk sempurna saat masa pertumbuhan"
+    },
+    {
+      "term": "Impaction",
+      "description": "Gigi terpendam di dalam gusi atau tulang rahang"
+    },
+    {
+      "term": "Missing",
+      "description": "Gigi hilang karena dicabut atau tanggal sendiri"
+    },
+    {
+      "term": "Other / Miscellaneous",
+      "description": "Kondisi spesifik, anomali bawaan, atau patologi langka lainnya"
+    },
+    {
+      "term": "Periodontal Pocket",
+      "description": "Celah atau kantong patologis antara gusi dan gigi"
+    },
+    {
+      "term": "Periodontitis",
+      "description": "Peradangan pada jaringan pendukung gigi"
+    },
+    {
+      "term": "Persistence",
+      "description": "Gigi susu belum tanggal padahal gigi tetap sudah tumbuh"
+    },
+    {
+      "term": "Pulpitis",
+      "description": "Peradangan pada jaringan saraf di dalam gigi"
+    },
+    {
+      "term": "Radix",
+      "description": "Sisa akar gigi dengan mahkota gigi sudah habis"
+    },
+    { "term": "Sound", "description": "Gigi sehat atau tidak ada kelainan" },
+    { "term": "Supernumerary", "description": "Kondisi kelebihan jumlah gigi" }
+  ],
+  "procedures": [
+    {
+      "term": "Amalgam Restoration",
+      "description": "Tambalan menggunakan logam perak atau hitam"
+    },
+    { "term": "Bridge", "description": "Pemasangan gigi tiruan jembatan" },
+    {
+      "term": "Composite Restoration",
+      "description": "Tambalan menggunakan resin sewarna gigi"
+    },
+    {
+      "term": "Crown",
+      "description": "Pemasangan gigi tiruan berupa mahkota selubung"
+    },
+    { "term": "Denture", "description": "Pemasangan gigi tiruan lepasan" },
+    { "term": "Extraction", "description": "Prosedur pencabutan gigi" },
+    {
+      "term": "Glass Ionomer Cement",
+      "description": "Tambalan berbahan semen ionomer"
+    },
+    {
+      "term": "Gutta Percha Filling",
+      "description": "Pengisian bahan pada saluran akar"
+    },
+    {
+      "term": "Root Canal Treatment",
+      "description": "Prosedur perawatan saluran akar"
+    },
+    { "term": "Scaling", "description": "Prosedur pembersihan karang gigi" }
+  ],
+  "locations": [
+    {
+      "term": "Buccal",
+      "description": "Permukaan gigi yang menghadap ke arah pipi"
+    },
+    {
+      "term": "Distal",
+      "description": "Permukaan gigi yang menghadap ke arah belakang mulut"
+    },
+    {
+      "term": "Lingual",
+      "description": "Permukaan gigi yang menghadap ke arah lidah"
+    },
+    {
+      "term": "Mesial",
+      "description": "Permukaan gigi yang menghadap ke arah depan atau tengah mulut"
+    },
+    { "term": "Occlusal", "description": "Permukaan gigi bagian kunyah" }
+  ]
+}
